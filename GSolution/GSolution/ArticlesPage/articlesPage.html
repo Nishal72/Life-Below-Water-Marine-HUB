@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #000;
+}
+.btn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+.cn:hover{
+    background-color: #fff;
+}
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.form input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+    }
+    @keyframes pulse {
+        from { transform: scale(1); opacity: 1; }
+        to { transform: scale(2); opacity: 0; }
+    }
+
+</style>
+<body>
+
+    <img id="mascot" src="mascot.png">
+
+  </main>
+	
+	<script>
+		var mascot = document.getElementById("mascot");
+		document.addEventListener("mousemove", function(event) {
+			var x = event.clientX;
+			var y = event.clientY;
+			mascot.style.display = "block";
+			mascot.style.left = x + "px";
+			mascot.style.top = y + "px";
+		});
+		document.addEventListener("mousedown", function(event) {
+			if (event.button === 0) {
+				mascot.style.filter = "hue-rotate(90deg)";
+			}
+		});
+		document.addEventListener("mouseup", function(event) {
+			if (event.button === 0) {
+				mascot.style.filter = "";
+			}
+		});
+		
+		function randomAnimation() {
+			var animations = ["spin 2s linear", "bounce 1s ease-in-out", "pulse 1s ease-in-out"];
+			var randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+			mascot.style.animation = randomAnimation;
+			setTimeout(function() {
+				mascot.style.animation = "";
+			}, 2000);
+		}
+		
+		setInterval(randomAnimation, 10000);
+	</script>
+    
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                
+     </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="/GSolution/HomePage/index.html">HOME</a></li>
+            <li><a href="/GSolution/AboutPage/about.html">ABOUT</a></li>
+            <li><a href="/GSolution/ResourcesPage/resources.html">RESOURCES</a></li>
+            <li><a href="/GSolution/ArticlesPage/articlesPage.html">ARTICLES</a></li>
+            <li><a href="/GSolution/ContactPage/contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To text">
+            <a href="#"> <button class="btn">Search</button></a>
+    </div>
+
+    <h2>&nbsp;</h2>
+
+    <div class="article-list">
+        <div class="article">
+          <h2>Overfishing: Understanding the Problem and Its Impacts</h2>
+          <img src="/GSolution\ArticlesPage\ArticlesPictures\OverFishing.jpg">
+          <p>Overfishing, catching fish faster than they can reproduce, is driven by demand for seafood, technology, and subsidies. 
+            It leads to declines in fish populations, reduced food security, and environmental degradation. 
+            WWF promotes sustainable practices, science-based catch limits, and consumer education to reduce overfishing.
+          </p>
+          <a href="https://www.worldwildlife.org/threats/overfishing">Read More</a>
+        </div>
+  
+        <div class="article">
+          <h2>The biggest threat to life below water: Apathy</h2>
+          <img src="/GSolution\ArticlesPage\ArticlesPictures\Aphathy.jpg" height="43%" width="100%">
+          <p>The biggest threat to life below water is apathy. 
+            Many people have become desensitized to the problems our oceans face, which include pollution and overfishing. 
+            Collaboration and individual actions are needed to create sustainable solutions that protect and conserve our oceans..</p>
+          <a href="https://sustainablebrands.com/read/collaboration-cocreation/the-biggest-threat-to-life-below-water-apathy">Read More</a>
+        </div>
+
+        <div class="article">
+            <h2>"Ocean Explorer Michael Lombardi"</h2>
+            <img src="/GSolution\ArticlesPage\ArticlesPictures\cliff-diving.jpg">
+            <p>
+                National Geographic Education has a resource page called "Real World Geography: Ocean Explorer". 
+                The page contains interactive maps, videos, articles, and lesson plans designed to engage students in the study of the world's oceans. 
+                The resources promote geographic literacy and understanding of the natural world, helping students develop critical thinking and problem-solving skills.</p>
+            <a href="https://www.example.com/article2">Read More</a>
+          </div>
+
+          <div class="article">
+            <h2>"The Impact of Plastic: National Geographic Education on Ocean Pollution"</h2>
+            <img src="/GSolution/ArticlesPage/ArticlesPictures/albatross-ate-plastic.jpg">
+            <p>The National Geographic Education article, "Ocean Trash: 5.25 Trillion Pieces and Counting, Big Questions Remain", highlights the scale of ocean pollution caused by plastic waste. 
+                The article discusses the impact on marine life and ecosystems, as well as potential solutions such as bioplastics and policy changes. 
+                The article emphasizes the importance of continued research and awareness to address this global problem.</p>
+            <a href="https://education.nationalgeographic.org/resource/ocean-trash-525-trillion-pieces-and-counting-big-questions-remain/">Read More</a>
+          </div>
+
+          <div class="article">
+            <h2>"Bringing the Ocean Back"</h2>
+            <img src="/GSolution\ArticlesPage\ArticlesPictures\Bringing the ocean back.jpg">
+            <p>
+                "Bringing the Ocean Back" is a National Geographic Education resource that explores the impact of human activity on the oceans and offers solutions for protecting and restoring marine environments. 
+                The resource emphasizes the importance of healthy oceans for the planet's overall health</p>
+            <a href="https://education.nationalgeographic.org/resource/bringing-the-ocean-back/">Read More</a>
+          </div>
+
+          <div class="article">
+            <h2>Article Title 6</h2>
+            <p>Article summary goes here.</p>
+            <a href="https://www.example.com/article2">Read More</a>
+          </div>
+
+        <!-- Add more articles as needed -->
+      </div>
+      
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

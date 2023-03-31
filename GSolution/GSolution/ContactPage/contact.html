@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+   
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+.btn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
+}
+.content{
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    color: #fff;
+    position:relative; left:340px; bottom: -10px;
+    font-size: 120%;
+   font-weight: bolder;
+}
+.content-form{
+    width: 200px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 90px;
+    color: white;
+    position:relative; left:-630px; bottom: -70px;
+    font-size: 90%;
+   font-weight:normal;
+}
+.content .par{
+    padding-left: 10px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+.cn:hover{
+    background-color: #fff;
+}
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+.form{
+    width: 560px;
+    height: 460px;
+    background: black;
+    position:absolute;
+    top: 200px;
+    left: 470px;
+    transform: translate(0%,-5%);
+    border-radius: 20px;
+    padding: 25px;
+}
+.form h4{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: left;
+    color: #fff;
+    font-size: 19px;
+    background-color: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px;
+}
+.form input{
+    width: 500px;
+    height: 25px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-family: sans-serif;    
+}
+.form input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;   
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-right: 5px;
+    padding-top: 40px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+   
+}
+
+#mascot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        pointer-events: none;
+        z-index: 9999;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+    }
+    @keyframes pulse {
+        from { transform: scale(1); opacity: 1; }
+        to { transform: scale(2); opacity: 0; }
+    }
+
+</style>
+<body>
+
+    <img id="mascot" src="/GSolution/mascot.png">
+  </main>
+	
+	<script>
+		var mascot = document.getElementById("mascot");
+		document.addEventListener("mousemove", function(event) {
+			var x = event.clientX;
+			var y = event.clientY;
+			mascot.style.display = "block";
+			mascot.style.left = x + "px";
+			mascot.style.top = y + "px";
+		});
+		document.addEventListener("mousedown", function(event) {
+			if (event.button === 0) {
+				mascot.style.filter = "hue-rotate(90deg)";
+			}
+		});
+		document.addEventListener("mouseup", function(event) {
+			if (event.button === 0) {
+				mascot.style.filter = "";
+			}
+		});
+		
+		function randomAnimation() {
+			var animations = ["spin 2s linear", "bounce 1s ease-in-out", "pulse 1s ease-in-out"];
+			var randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+			mascot.style.animation = randomAnimation;
+			setTimeout(function() {
+				mascot.style.animation = "";
+			}, 2000);
+		}
+		
+		setInterval(randomAnimation, 10000);
+	</script>
+    
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">    
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="/GSolution/HomePage/index.html">HOME</a></li>
+            <li><a href="/GSolution/AboutPage/about.html">ABOUT</a></li>
+            <li><a href="/GSolution/ResourcesPage/resources.html">RESOURCES</a></li>
+            <li><a href="/GSolution/ArticlesPage/articlesPage.html">ARTICLES</a></li>
+            <li><a href="/GSolution/ContactPage/contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To text">
+            <a href="#"> <button class="btn">Search</button></a>
+    </div>
+
+    </div> 
+        <div class="content">
+            <div class="content">
+                <p class="par">CONTACT US</p>
+    </div>
+
+    <div class="content">
+        <div class="content-form">
+                <section>
+                    <i class="fa fa-map-marker fa-2x" ></i>  
+                    <h3>address</h3>
+                        <p>
+                            Royal Rd, Baie du Cap. <br>
+                            Choisy. <br>
+                                Mauritius
+                        </p>
+                </section>
+    
+                <section>
+                     <br>  
+                     <i class="fa fa-phone fa-2x" ></i> 
+                        <h3>Phone</h3>
+                        <p>230-59824353</p>
+                </section>
+
+                <section>
+                      <br>
+                      <i class="fa fa-envelope fa-2x"></i>
+                        <h3>E-mail</h3>
+                        <p>nishal72babajee@gmail.com</p>
+                </section>
+    </div>
+        </div>
+
+    <div class="form">
+            <h4>Full Name</h4>
+            <input type="text" name="email" placeholder="John Wick">
+            <h4>Email id</h4>
+            <input type="email" name="" placeholder="Johnattan@gmail.com">
+            <h4>Type your Message....</h4>
+            <input type="text" name="" placeholder="Hi, I would like to request news from said Webpage">
+
+            <button class="btnn"><a href="#">Submit</a></button>
+            
+    <div class="icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+    </div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

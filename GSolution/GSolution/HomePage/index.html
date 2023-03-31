@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    #mascot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        pointer-events: none;
+        z-index: 9999;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+    }
+    @keyframes pulse {
+        from { transform: scale(1); opacity: 1; }
+        to { transform: scale(2); opacity: 0; }
+    }
+
+</style>	  	
+
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img id="mascot" src="/GSolution/mascot.png">
+  </main>
+	
+	<script>
+		var mascot = document.getElementById("mascot");
+		document.addEventListener("mousemove", function(event) {
+			var x = event.clientX;
+			var y = event.clientY;
+			mascot.style.display = "block";
+			mascot.style.left = x + "px";
+			mascot.style.top = y + "px";
+		});
+		document.addEventListener("mousedown", function(event) {
+			if (event.button === 0) {
+				mascot.style.filter = "hue-rotate(90deg)";
+			}
+		});
+		document.addEventListener("mouseup", function(event) {
+			if (event.button === 0) {
+				mascot.style.filter = "";
+			}
+		});
+		
+		function randomAnimation() {
+			var animations = ["spin 2s linear", "bounce 1s ease-in-out", "pulse 1s ease-in-out"];
+			var randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+			mascot.style.animation = randomAnimation;
+			setTimeout(function() {
+				mascot.style.animation = "";
+			}, 2000);
+		}
+		
+		setInterval(randomAnimation, 10000);
+	</script>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+             
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="/GSolution/AboutPage/about.html">ABOUT</a></li>
+                    <li><a href="/GSolution/ResourcesPage/resources.html">RESOURCES</a></li>
+                    <li><a href="/GSolution/ArticlesPage/articlesPage.html">ARTICLES</a></li>
+                    <li><a href="/GSolution/ContactPage/contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+                
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1>Welcome to<br><span>Marine Hub</h1>
+            <p class="par">Life below water is essential to our planet's ecosystem. The ocean covers more than 70% <br>of the earth's surface and is home to millions of species of marine plants and animals.<br> It also provides a source of food and livelihood for millions of people around the world. However,<br> overfishing, pollution, and climate change are threatening the health and well-being of our oceans<br> and the creatures that live in them. It's important that we take action to protect our oceans and<br> ensure that they remain healthy and vibrant for generations to come</p>
+
+                <button class="cn"><a href="#">JOIN US</a></button>
+
+                <div class="form">
+                    <h2>Login Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" name="" placeholder="Enter Password Here">
+                    <button class="btnn"><a href="#">Login</a></button>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="#">Sign up </a> here</a></p>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
